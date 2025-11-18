@@ -56,9 +56,9 @@ def main():
             if not target:
                 return  # stop if file not found
 
-            tries = 1 #user will start 1 tire/ max tries
+            tries = 0 #user will start 1 tire/ max tries
             while tries < MAX_TRIES:
-                guess = input(f"Attempt {tries}/{MAX_TRIES} — Enter a {WORD_LEN}-letter word: ").lower().strip()
+                guess = input(f"Attempt {tries+1}/{MAX_TRIES} — Enter a {WORD_LEN}-letter word: ").lower().strip()
 
                 # VALIDATIONS ( != NOT THE FITTED LENGTH or NOT A LETTER)
                 if len(guess) != WORD_LEN:
